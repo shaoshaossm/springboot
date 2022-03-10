@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body th:inline="text">
+<div th:text="${data}"></div>
+<h3 th:text="${data}"></h3>
+<h3>内敛文本</h3>
+<div th:inline="text">
+    数据：[[${data}]]
+</div>
+
+数据：[[${data}]]
+
+<h3>内敛脚本</h3>
+    <script type="text/javascript" th:inline="javascript">
+        function showData() {
+            alert("-------")
+            alert([[${data}]])
+        }
+    </script>
+<button th:onclick="showData()">展示数据</button>
+</body>
+</html>

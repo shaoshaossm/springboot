@@ -1,0 +1,5 @@
+pets:
+  - cat
+  - dog
+  - pig
+pet2s: [cat,dog,pig]

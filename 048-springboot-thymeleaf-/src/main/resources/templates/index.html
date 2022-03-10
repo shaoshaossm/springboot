@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>送session中获取值</h1>
+<span th:text="${#session.getAttribute('data')}"></span><br>
+<span th:text="${#httpSession.getAttribute('data')}"></span><br>
+<span th:text="${session.data}"></span>
+<span th:text="${username}"></span>
+
+<script type="text/javascript" th:inline="javascript">
+    var scheme = [[${#request.getScheme()}]];
+    alert([[${#request.getScheme()}]])
+
+    alert([[${#request.getServerName()}]])
+
+    alert([[${#request.getServerPort()}]])
+
+    alert([[${#request.getContextPath()}]])
+
+    var requestURL = [[${#httpServletRequest.requestURL}]];
+    var requestString = [[${#httpServletRequest.queryString}]];
+    var  requestAddress = requestURL + "?" + requestString;
+    alert(requestURL)
+    alert(requestString)
+    alert(requestAddress)
+</script>
+</body>
+</html>

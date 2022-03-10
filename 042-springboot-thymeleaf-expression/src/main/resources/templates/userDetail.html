@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>标准变量表达式${}</h1>
+<h3 th:text="${user.id}"></h3>
+<span th:text="${user.username}"></span>
+<span th:text="${user.age}"></span>
+<span th:text="${user}"></span>
+
+
+<h1>选择变量表达式:*{}</h1>
+<div th:object="${user}">
+    <span th:text="*{id}"></span>
+    <span th:text="*{username}"></span>
+    <span th:text="*{age}"></span>
+
+
+</div>
+
+<h1>混合使用</h1>
+<span th:text="*{user.username}"></span>
+<span th:text="*{user.age}"></span>
+<span th:text="*{user.id}"></span>
+</body>
+</html>

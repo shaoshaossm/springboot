@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>常见属性</title>
+</head>
+<body>
+<form method="get" action="http://localhost:8080/test1">
+    用户编号:<input type="text" name="id" />
+    用户名称:<input type="text" name="username" />
+    用户年龄:<input type="text" name="age" />
+    <input type="submit" value="submit"/>
+</form><br/>
+
+<form method="get" th:action="@{/test1}">
+    用户编号:<input type="text" th:name="id" th:id="id"/>
+    用户名称:<input type="text" th:name="username" th:id="username"/>
+    用户年龄:<input type="text" th:name="age" th:id="age"/>
+    <input type="submit" value="submit"/>
+</form>
+
+
+
+</body>
+</html>

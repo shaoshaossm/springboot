@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div th:if="${sex eq 1}">
+    男
+</div>
+<div th:if="${sex eq 0}">
+    女
+</div>
+<div th:unless="${sex ne 1}">
+    女
+</div>
+
+<div th:switch="${productType}">
+    <span th:case="0">产品0</span>
+    <span th:case="1">产品1</span>
+    <span th:case="*">无产品</span>
+</div>
+</body>
+</html>

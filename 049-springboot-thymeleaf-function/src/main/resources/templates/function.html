@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<div th:text="${time}"></div>
+<div th:text="${#dates.format(time,'yyyy-MM-dd HH-mm-ss-SSS')}"></div>
+<div th:text="${data}"></div>
+<div th:text="${#strings.substring(data,3,5)}"></div>
+</body>
+</html>
